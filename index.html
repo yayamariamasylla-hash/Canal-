@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CANAL+ Sénégal | Offres d'abonnement TV</title>
+  <!-- Favicon C+ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e40019'/><text y='.9em' font-size='80' font-family='Arial' font-weight='900' fill='white'>C+</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ LOADER DE PAGE ═══ -->
+<div id="pageLoader">
+  <div class="loader-logo">CANAL<span>+</span></div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+  <div class="loader-text">Chargement en cours...</div>
+</div>
+
+<!-- ═══ BOUTON SCROLL TOP ═══ -->
+<button id="scrollTopBtn" onclick="scrollToTop()" title="Retour en haut">▲</button>
+
+<!-- ═══ BANDEAU COOKIES ═══ -->
+<div class="cookie-banner" id="cookieBanner">
+  <span>🍪 Nous utilisons des cookies pour améliorer votre expérience sur CANAL+ Sénégal.</span>
+  <div class="cookie-btns">
+    <button class="cookie-refuse" onclick="closeCookies()">Refuser</button>
+    <button class="cookie-accept" onclick="closeCookies()">Accepter</button>
+  </div>
+</div>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="#">Boutiques</a>
+    <span class="topbar-sep">|</span>
+    <a href="#">📞 33 889 50 10</a>
+    <span class="topbar-sep">|</span>
+    <a href="#">Aide &amp; Contact</a>
+  </div>
+  <div class="topbar-right">
+    <span>🇸🇳 Sénégal</span>
+    <span class="topbar-sep">|</span>
+    <a href="#">🌍 Changer de pays</a>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-left">
+    <div class="logo">
+      <span class="c">CANAL</span><span class="plus">+</span>
+      <div class="logo-separator"></div>
+      <span class="logo-country">🇸🇳 Sénégal</span>
+    </div>
+    <div class="nav-links">
+      <a href="#offres" class="active">Nos Offres</a>
+      <a href="#series-films">Séries &amp; Films</a>
+      <a href="#chaines">Chaînes</a>
+      <a href="#decodeurs">Décodeurs</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="nav-search-btn" onclick="toggleModal('searchModal')" title="Rechercher">🔍</button>
+    <button class="btn-login" onclick="openEspaceClient()">Espace Client</button>
+    <button class="btn-reabo" onclick="toggleModal('reaboModal')">Se réabonner</button>
+    <button class="btn-subscribe" onclick="toggleModal('subscribeModal')">S'abonner</button>
+  </div>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#offres-section" onclick="closeMobileMenu()">Nos Offres</a>
+  <a href="#series-films" onclick="closeMobileMenu()">Séries &amp; Films</a>
+  <a href="#guide-tv" onclick="closeMobileMenu()">Guide TV</a>
+  <a href="#chaines" onclick="closeMobileMenu()">Chaînes</a>
+  <a href="#decodeurs" onclick="closeMobileMenu()">Décodeurs</a>
+  <a href="#mycanal" onclick="closeMobileMenu()">myCANAL</a>
+  <a href="#actualites" onclick="closeMobileMenu()">Actualités</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  <div class="mobile-menu-btns">
+    <button class="btn-subscribe" style="background:transparent;border:1px solid #555;color:#fff;" onclick="closeMobileMenu();toggleModal('reaboModal')">Se réabonner</button>
+    <button class="btn-subscribe" onclick="closeMobileMenu();toggleModal('subscribeModal')">S'abonner</button>
+  </div>
+</div>
+
+<!-- ═══ SUB NAV ═══ -->
+<div class="subnav">
+  <a href="#offres" class="subnav-link active" onclick="setSubnavActive(this)">Offres TV</a>
+  <a href="#series-films" class="subnav-link" onclick="setSubnavActive(this)">🎬 Séries &amp; Films</a>
+  <a href="#guide-tv" class="subnav-link" onclick="setSubnavActive(this)">📅 Guide TV</a>
+  <a href="#chaines" class="subnav-link" onclick="setSubnavActive(this)">📺 Chaînes</a>
+  <a href="#decodeurs" class="subnav-link" onclick="setSubnavActive(this)">📦 Décodeurs</a>
+  <a href="#mycanal" class="subnav-link" onclick="setSubnavActive(this)">📱 myCANAL</a>
+  <a href="#actualites" class="subnav-link" onclick="setSubnavActive(this)">📰 Actualités</a>
+  <a href="#revendeurs" class="subnav-link" onclick="setSubnavActive(this)">📍 Revendeurs</a>
+</div>
+
+<!-- ═══ HERO DIAPORAMA ═══ -->
+<div class="hero-slider" id="offres">
+
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- Slide 1 : Sport -->
+    <div class="slide active">
+      <div class="slide-bg" style="background:linear-gradient(135deg,#0a1628 0%,#1a0a00 50%,#0a0a0a 100%);">
+        <span class="slide-bg-emoji">⚽</span>
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">🏆 Exclusivité CAN 2025</span>
+        <h1 class="hero-title">Le meilleur du <span class="red">Sport Africain</span> en direct</h1>
+        <p class="hero-subtitle">CAN 2025, Ligue des Champions, Lutte Sénégalaise — tout en HD sur CANAL+ Sport.</p>
+        <div class="hero-actions">
+          <button class="btn-red" onclick="toggleModal('subscribeModal')">Découvrir l'offre</button>
+          <button class="btn-outline-white" onclick="document.getElementById('chaines').scrollIntoView({behavior:'smooth'})">Voir les chaînes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 : Cinéma -->
+    <div class="slide">
+      <div class="slide-bg" style="background:linear-gradient(135deg,#0a0a1a 0%,#1a0028 50%,#0a0a0a 100%);">
+        <span class="slide-bg-emoji">🎬</span>
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">🎬 CANAL+ Cinéma</span>
+        <h1 class="hero-title">Les plus grands <span class="red">Films &amp; Séries</span> du monde</h1>
+        <p class="hero-subtitle">Blockbusters, séries exclusives, films d'auteur — un nouveau film chaque soir.</p>
+        <div class="hero-actions">
+          <button class="btn-red" onclick="toggleModal('subscribeModal')">S'abonner</button>
+          <button class="btn-outline-white" onclick="document.getElementById('series-films').scrollIntoView({behavior:'smooth'})">Voir les séries</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 : Afrique -->
+    <div class="slide">
+      <div class="slide-bg" style="background:linear-gradient(135deg,#001a0a 0%,#0a1a00 50%,#0a0a0a 100%);">
+        <span class="slide-bg-emoji">🌍</span>
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">🌍 Chaînes Africaines</span>
+        <h1 class="hero-title">A+, Sunu Yeuf &amp; les meilleures <span class="red">chaînes du continent</span></h1>
+        <p class="hero-subtitle">Séries africaines, culture locale, divertissement — vivez l'Afrique en direct.</p>
+        <div class="hero-actions">
+          <button class="btn-red" onclick="toggleModal('subscribeModal')">Découvrir</button>
+          <button class="btn-outline-white" onclick="document.getElementById('chaines').scrollIntoView({behavior:'smooth'})">Toutes les chaînes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 : Famille -->
+    <div class="slide">
+      <div class="slide-bg" style="background:linear-gradient(135deg,#1a0800 0%,#280a00 50%,#0a0a0a 100%);">
+        <span class="slide-bg-emoji">👨‍👩‍👧</span>
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">👨‍👩‍👧 Pour toute la famille</span>
+        <h1 class="hero-title">Cartoon Network, Disney &amp; <span class="red">Gulli pour vos enfants</span></h1>
+        <p class="hero-subtitle">Des heures de divertissement pour les petits et les grands avec CANAL+.</p>
+        <div class="hero-actions">
+          <button class="btn-red" onclick="toggleModal('subscribeModal')">Choisir une offre</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Flèches -->
+  <button class="slider-btn slider-prev" onclick="changeSlide(-1)">&#8249;</button>
+  <button class="slider-btn slider-next" onclick="changeSlide(1)">&#8250;</button>
+
+  <!-- Points -->
+  <div class="slider-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+  </div>
+
+  <!-- Barre progression -->
+  <div class="slider-progress" id="sliderProgress"></div>
+
+  <!-- Pause -->
+  <button class="slider-pause" id="sliderPause" onclick="togglePause()">⏸</button>
+
+</div>
+
+<!-- ═══ BARRE PRODUITS RAPIDES ═══ -->
+<div class="quick-products">
+  <div class="qp-item">
+    <div class="qp-icon">🔄</div>
+    <div class="qp-info">
+      <div class="qp-title">Réabonnement</div>
+      <div class="qp-desc">Renouvelez votre abonnement en un clic sans interruption.</div>
+    </div>
+    <button class="qp-btn" onclick="toggleModal('reaboModal')">SE RÉABONNER</button>
+  </div>
+  <div class="qp-sep"></div>
+  <div class="qp-item">
+    <div class="qp-icon">📦</div>
+    <div class="qp-info">
+      <div class="qp-title">Décodeur Connecté</div>
+      <div class="qp-desc">Plus de 50 000 programmes en replay, expérience TV fluide.</div>
+    </div>
+    <button class="qp-btn" onclick="document.getElementById('decodeurs').scrollIntoView({behavior:'smooth'})">DÉCOUVRIR</button>
+  </div>
+  <div class="qp-sep"></div>
+  <div class="qp-item">
+    <div class="qp-icon">📺</div>
+    <div class="qp-info">
+      <div class="qp-title">Décodeur HD</div>
+      <div class="qp-desc">Résolution 4 fois supérieure à la qualité standard.</div>
+    </div>
+    <button class="qp-btn" onclick="document.getElementById('decodeurs').scrollIntoView({behavior:'smooth'})">DÉCOUVRIR</button>
+  </div>
+  <div class="qp-sep"></div>
+  <div class="qp-item">
+    <div class="qp-icon">📱</div>
+    <div class="qp-info">
+      <div class="qp-title">Application CANAL+</div>
+      <div class="qp-desc">La TV partout, tout le temps, même hors connexion.</div>
+    </div>
+    <button class="qp-btn" onclick="document.getElementById('mycanal').scrollIntoView({behavior:'smooth'})">DÉCOUVRIR</button>
+  </div>
+</div>
+
+<!-- ═══ OFFRES ═══ -->
+<section class="plans-section" id="offres-section">
+  <div class="section-center">
+    <span class="section-eyebrow">Abonnements</span>
+    <h2 class="section-title">Choisissez votre formule</h2>
+    <p class="section-sub">Des formules adaptées à toutes vos envies et à votre budget, sans engagement.</p>
+  </div>
+
+  <div class="plans-grid">
+    <div class="plan-card has-badge">
+      <div class="plan-badge badge-blue">Le Meilleur Prix</div>
+      <h3 class="plan-name">BOUQUET ACCESS</h3>
+      <p class="plan-tagline">L'essentiel des chaînes Canal+ et des chaînes locales.</p>
+      <div class="plan-price-block">
+        <span class="plan-price">5 000 <span class="plan-currency">FCFA</span></span>
+        <span class="plan-period">/ mois</span>
+      </div>
+      <div class="plan-divider"></div>
+      <span class="plan-channels">Plus de 120 chaînes</span>
+      <div class="plan-features">
+        <div class="pf"><span class="pf-check"></span> Grandes chaînes sénégalaises</div>
+        <div class="pf"><span class="pf-check"></span> Accès gratuit à myCANAL</div>
+        <div class="pf"><span class="pf-check"></span> Chaînes info internationales</div>
+        <div class="pf disabled"><span class="pf-x">✕</span> Football International Premium</div>
+        <div class="pf disabled"><span class="pf-x">✕</span> CANAL+ Cinéma</div>
+      </div>
+      <button class="plan-btn plan-btn-outline" onclick="toggleModal('subscribeModal')">Sélectionner</button>
+    </div>
+
+    <div class="plan-card featured has-badge">
+      <div class="plan-popular">Le plus populaire 🔥</div>
+      <h3 class="plan-name">BOUQUET ÉVASION</h3>
+      <p class="plan-tagline">Pour toute la famille : grands films, séries et jeunesse.</p>
+      <div class="plan-price-block">
+        <span class="plan-price">10 000 <span class="plan-currency">FCFA</span></span>
+        <span class="plan-period">/ mois</span>
+      </div>
+      <div class="plan-divider"></div>
+      <span class="plan-channels">Plus de 160 chaînes</span>
+      <div class="plan-features">
+        <div class="pf"><span class="pf-check"></span> Tout le bouquet ACCESS</div>
+        <div class="pf"><span class="pf-check"></span> Séries Novelas &amp; Films récents</div>
+        <div class="pf"><span class="pf-check"></span> Dessins animés pour enfants</div>
+        <div class="pf"><span class="pf-check"></span> A+ Sénégal &amp; Sunu Yeuf</div>
+        <div class="pf disabled"><span class="pf-x">✕</span> CANAL+ Sport Premium</div>
+      </div>
+      <button class="plan-btn plan-btn-red" onclick="toggleModal('subscribeModal')">Sélectionner</button>
+    </div>
+
+    <div class="plan-card has-badge">
+      <div class="plan-badge badge-purple">Conseillé pour le Sport</div>
+      <h3 class="plan-name">BOUQUET ÉVASION+</h3>
+      <p class="plan-tagline">Le plein de cinéma, grands championnats et documentaires.</p>
+      <div class="plan-price-block">
+        <span class="plan-price">20 000 <span class="plan-currency">FCFA</span></span>
+        <span class="plan-period">/ mois</span>
+      </div>
+      <div class="plan-divider"></div>
+      <span class="plan-channels">Plus de 180 chaînes</span>
+      <div class="plan-features">
+        <div class="pf"><span class="pf-check"></span> Tout le bouquet ÉVASION</div>
+        <div class="pf"><span class="pf-check"></span> Les chaînes CANAL+ SPORT</div>
+        <div class="pf"><span class="pf-check"></span> beIN Sports inclus</div>
+        <div class="pf"><span class="pf-check"></span> Documentaires &amp; Découvertes</div>
+        <div class="pf disabled"><span class="pf-x">✕</span> Netflix &amp; DStv</div>
+      </div>
+      <button class="plan-btn plan-btn-outline" onclick="toggleModal('subscribeModal')">Sélectionner</button>
+    </div>
+
+    <div class="plan-card has-badge">
+      <div class="plan-badge badge-gold">VIP Experience ⭐</div>
+      <h3 class="plan-name">TOUT CANAL+</h3>
+      <p class="plan-tagline">L'expérience absolue. Absolument tout est inclus.</p>
+      <div class="plan-price-block">
+        <span class="plan-price">40 000 <span class="plan-currency">FCFA</span></span>
+        <span class="plan-period">/ mois</span>
+      </div>
+      <div class="plan-divider"></div>
+      <span class="plan-channels">Toutes les chaînes</span>
+      <div class="plan-features">
+        <div class="pf"><span class="pf-check"></span> 100% des chaînes sans exception</div>
+        <div class="pf"><span class="pf-check"></span> Netflix + DStv inclus</div>
+        <div class="pf"><span class="pf-check"></span> Qualité ULTRA HD 4K</div>
+        <div class="pf"><span class="pf-check"></span> 4 écrans simultanés</div>
+        <div class="pf"><span class="pf-check"></span> Téléchargement hors ligne</div>
+      </div>
+      <button class="plan-btn plan-btn-outline" onclick="toggleModal('subscribeModal')">Sélectionner</button>
+    </div>
+  </div>
+
+  <!-- Moyens de paiement -->
+  <div class="payment-methods">
+    <span>Réabonnez-vous instantanément avec :</span>
+    <div class="payment-logos">
+      <span class="logo-pay wave">Wave</span>
+      <span class="logo-pay orange">Orange Money</span>
+      <span class="logo-pay free">Free Money</span>
+      <span class="logo-pay expresso">Expresso</span>
+    </div>
+    <div class="payment-notice">⚠️ Frais de service de 200 FCFA appliqués via Mobile Money</div>
+  </div>
+</section>
+
+<!-- ═══ PROMO BANNER ═══ -->
+<div class="promo-banner">
+  <div>
+    <div style="font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.2rem;">Nouveauté</div>
+    <div class="promo-banner-text">LA NOUVELLE SEMAINE GÉNÉREUSE — Réabonnez‑vous en avance et débloquez 7 jours de chaînes bonus !</div>
+    <div class="promo-banner-sub">Automatique, sans surcoût, valable à chaque réabonnement avant échéance.</div>
+  </div>
+  <button class="btn-white" onclick="toggleModal('reaboModal')">SE RÉABONNER</button>
+</div>
+
+<!-- ═══ SÉRIES & FILMS ═══ -->
+<section class="series-section" id="series-films">
+  <div class="section-center">
+    <span class="section-eyebrow" style="color:var(--red);">CANAL+ ORIGINAL</span>
+    <h2 class="section-title" style="color:#fff;">Séries &amp; Films exclusifs</h2>
+    <p class="section-sub" style="color:#888;">Les meilleures créations originales africaines en exclusivité sur CANAL+</p>
+  </div>
+
+  <!-- Onglets -->
+  <div class="series-tabs">
+    <button class="series-tab active" data-tab="series" onclick="showSeriesTab(this)">📺 Séries Original</button>
+    <button class="series-tab" data-tab="films" onclick="showSeriesTab(this)">🎬 Films à l'affiche</button>
+    <button class="series-tab" data-tab="sport" onclick="showSeriesTab(this)">⚽ Sport</button>
+  </div>
+
+  <!-- Séries -->
+  <div class="series-grid" id="tab-series">
+    <div class="series-card" onclick="openTrailer('puUezITfCRw','Sakho &amp; Mangane')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#0a0a28,#1a0028);">🔍</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ ORIGINAL</div>
+        <div class="series-flag">🇸🇳 Sénégal</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Sakho &amp; Mangane</div>
+        <div class="series-meta">Série policière · 8 épisodes</div>
+        <div class="series-desc">Deux policiers aux caractères opposés enquêtent sur des crimes mêlant mystères et surnaturel à Dakar.</div>
+        <div class="series-tags"><span class="stag">Policier</span><span class="stag">Surnaturel</span><span class="stag">Dakar</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Black Santiago Club')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#0a0a0a,#1a0a28);">🎺</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ ORIGINAL</div>
+        <div class="series-flag">🇧🇯 Bénin</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Black Santiago Club</div>
+        <div class="series-meta">Thriller musical · 8 épisodes</div>
+        <div class="series-desc">À Cotonou, un orchestre mythique lutte pour sa survie. Prix de la Meilleure Musique — DAKAR SERIES 2023.</div>
+        <div class="series-tags"><span class="stag">Thriller</span><span class="stag">Musique</span><span class="stag">Afrobeat</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Ôbatanga')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#1a0a00,#280a00);">🔪</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ ORIGINAL</div>
+        <div class="series-flag">🌍 Afrique</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Ôbatanga</div>
+        <div class="series-meta">Thriller · Sélection FESPACO</div>
+        <div class="series-desc">Un entrepreneur retrouvé mort dans un appartement luxueux. Accident ou meurtre ? Un thriller haletant.</div>
+        <div class="series-tags"><span class="stag">Thriller</span><span class="stag">Suspense</span><span class="stag">FESPACO</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Cacao')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#1a0800,#2a1000);">🌿</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ ORIGINAL</div>
+        <div class="series-flag">🇨🇮 Côte d'Ivoire</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Cacao</div>
+        <div class="series-meta">Drame · 12 épisodes · Primée</div>
+        <div class="series-desc">Meilleure fiction francophone étrangère au Festival de La Rochelle. Pouvoir et passion en Côte d'Ivoire.</div>
+        <div class="series-tags"><span class="stag">Drame</span><span class="stag">Côte d'Ivoire</span><span class="stag">Primée</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Films -->
+  <div class="series-grid" id="tab-films" style="display:none;">
+    <div class="series-card" onclick="openTrailer('puUezITfCRw','Black Panther')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#0a001a,#1a0028);">🦁</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Cinéma</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Black Panther</div>
+        <div class="series-meta">Action · Marvel · VF</div>
+        <div class="series-desc">T'Challa retourne au Wakanda pour prendre sa place sur le trône ancestral.</div>
+        <div class="series-tags"><span class="stag">Action</span><span class="stag">Marvel</span><span class="stag">VF</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('puUezITfCRw','Interstellar')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#000014,#00000a);">🌌</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Cinéma</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Interstellar</div>
+        <div class="series-meta">Sci-Fi · Christopher Nolan · VF</div>
+        <div class="series-desc">Des explorateurs voyagent à travers un trou de ver pour assurer la survie de l'humanité.</div>
+        <div class="series-tags"><span class="stag">Sci-Fi</span><span class="stag">Nolan</span><span class="stag">VF</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('puUezITfCRw','Gladiator II')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#1a0800,#280000);">⚔️</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Cinéma</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Gladiator II</div>
+        <div class="series-meta">Action · Ridley Scott · VF</div>
+        <div class="series-desc">La suite épique du film culte. Un nouveau guerrier entre dans l'arène de Rome.</div>
+        <div class="series-tags"><span class="stag">Action</span><span class="stag">Épique</span><span class="stag">VF</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('puUezITfCRw','Dune 2')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#1a1400,#280a00);">🏜️</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Cinéma</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Dune : Deuxième Partie</div>
+        <div class="series-meta">Sci-Fi · Denis Villeneuve · VF</div>
+        <div class="series-desc">Paul Atréides s'unit aux Fremen pour mener la guerre contre les conspirateurs.</div>
+        <div class="series-tags"><span class="stag">Sci-Fi</span><span class="stag">Épique</span><span class="stag">VF</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sport -->
+  <div class="series-grid" id="tab-sport" style="display:none;">
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','CAN 2025')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#001428,#001a00);">🏆</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge" style="background:#e3a008;">🏆 EXCLUSIVITÉ</div>
+        <div class="series-flag">CAN 2025</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">CAN 2025 — Sénégal Champion !</div>
+        <div class="series-meta">Finale · 52 matchs en replay</div>
+        <div class="series-desc">Revivez toute la CAN 2025 au Maroc sur myCANAL. Le Sénégal champion d'Afrique !</div>
+        <div class="series-tags"><span class="stag">Football</span><span class="stag">CAN 2025</span><span class="stag">Replay</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Lutte Sénégalaise')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#0a1400,#001a0a);">🥊</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Sport 1</div>
+        <div class="series-flag">🇸🇳 Lamb</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Lutte Sénégalaise — Lamb</div>
+        <div class="series-meta">Modou Lô vs Sa Thiès · Live</div>
+        <div class="series-desc">Les plus grands combats du Lamb en direct sur Canal+ Sport 1 pour toute l'Afrique.</div>
+        <div class="series-tags"><span class="stag">Lutte</span><span class="stag">Sénégal</span><span class="stag">Live</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Champions League')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#000a28,#001428);">⚽</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge">CANAL+ Sport</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Ligue des Champions UEFA</div>
+        <div class="series-meta">En direct · Toute la saison HD</div>
+        <div class="series-desc">Tous les matchs de la Ligue des Champions en direct et en HD sur Canal+ Sport.</div>
+        <div class="series-tags"><span class="stag">Football</span><span class="stag">UCL</span><span class="stag">HD</span></div>
+      </div>
+    </div>
+    <div class="series-card" onclick="openTrailer('EFDsO2dhzQA','Mondial 2026')">
+      <div class="series-thumb">
+        <div class="series-img" style="background:linear-gradient(135deg,#001428,#1a0028);">🌍</div>
+        <div class="series-play-btn">▶</div>
+        <div class="series-badge" style="background:#1a56db;">MONDIAL 2026</div>
+      </div>
+      <div class="series-info">
+        <div class="series-title">Coupe du Monde 2026</div>
+        <div class="series-meta">Sénégal 🇸🇳 vs France 🇫🇷</div>
+        <div class="series-desc">Le Sénégal affronte la France au Mondial 2026 ! Suivez les Lions sur Canal+.</div>
+        <div class="series-tags"><span class="stag">Mondial</span><span class="stag">Sénégal</span><span class="stag">2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GUIDE TV ═══ -->
+<section class="guide-section" id="guide-tv">
+  <div class="section-center">
+    <span class="section-eyebrow">Ce soir à la TV</span>
+    <h2 class="section-title">Guide des programmes</h2>
+  </div>
+  <div style="display:flex;justify-content:center;gap:6px;margin:1.5rem 0 2rem;flex-wrap:wrap;">
+    <button class="guide-day-btn active" onclick="setGuideDay(this)">Aujourd'hui</button>
+    <button class="guide-day-btn" onclick="setGuideDay(this)">Demain</button>
+    <button class="guide-day-btn" onclick="setGuideDay(this)">Samedi</button>
+    <button class="guide-day-btn" onclick="setGuideDay(this)">Dimanche</button>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;overflow-x:auto;">
+    <table class="guide-table">
+      <thead>
+        <tr>
+          <th>Chaîne</th>
+          <th>18h00</th>
+          <th>20h30</th>
+          <th>21h00</th>
+          <th>22h30</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="guide-ch"><span>⚽</span><b>C+ Sport</b></td>
+          <td class="prog sport">CAN 2025 Replay <span class="live-badge">LIVE</span></td>
+          <td class="prog sport">Mondial 2026 — Sénégal vs France</td>
+          <td class="prog sport">Analyse CAN</td>
+          <td class="prog">Journal sport</td>
+        </tr>
+        <tr>
+          <td class="guide-ch"><span>🎬</span><b>C+ Cinéma</b></td>
+          <td class="prog">Documentaire</td>
+          <td class="prog cinema">Black Panther <span class="vf-badge">VF</span></td>
+          <td class="prog muted">—</td>
+          <td class="prog cinema">Interstellar <span class="vf-badge">VF</span></td>
+        </tr>
+        <tr>
+          <td class="guide-ch"><span>🌍</span><b>A+ Sénégal</b></td>
+          <td class="prog">Journal 18h</td>
+          <td class="prog afrique">Wiri Wiri</td>
+          <td class="prog afrique">Ma Grande Famille <span class="live-badge">LIVE</span></td>
+          <td class="prog">Plateau culturel</td>
+        </tr>
+        <tr>
+          <td class="guide-ch"><span>🎵</span><b>MTV Base</b></td>
+          <td class="prog">Top 20 Afrique</td>
+          <td class="prog">Vidéos non-stop</td>
+          <td class="prog">MTV Africa Awards</td>
+          <td class="prog">Hits de minuit</td>
+        </tr>
+        <tr>
+          <td class="guide-ch"><span>🧒</span><b>Cartoon Net.</b></td>
+          <td class="prog jeunesse">Ben 10</td>
+          <td class="prog jeunesse">Tom &amp; Jerry</td>
+          <td class="prog jeunesse">Gumball</td>
+          <td class="prog muted">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ CHAÎNES ═══ -->
+<section id="chaines" class="channels-section">
+  <div class="section-center">
+    <h2 class="section-title">Vos chaînes préférées</h2>
+    <p class="section-sub">Retrouvez les plus grands médias sénégalais et internationaux en direct.</p>
+  </div>
+
+  <!-- Onglets filtre -->
+  <div class="ch-tabs">
+    <button class="ch-tab active" data-cat="all" onclick="filterChannels(this)">Toutes</button>
+    <button class="ch-tab" data-cat="sport" onclick="filterChannels(this)">Sport</button>
+    <button class="ch-tab" data-cat="cinema" onclick="filterChannels(this)">Cinéma</button>
+    <button class="ch-tab" data-cat="afrique" onclick="filterChannels(this)">Africaines</button>
+    <button class="ch-tab" data-cat="info" onclick="filterChannels(this)">Info</button>
+    <button class="ch-tab" data-cat="jeunesse" onclick="filterChannels(this)">Jeunesse</button>
+    <button class="ch-tab" data-cat="musique" onclick="filterChannels(this)">Musique</button>
+  </div>
+
+  <div class="channels-grid">
+    <div class="channel-cell" data-cat="sport"><span class="channel-cell-icon">⚽</span><span class="channel-cell-name">Canal+ Sport</span></div>
+    <div class="channel-cell" data-cat="sport"><span class="channel-cell-icon">🏆</span><span class="channel-cell-name">beIN Sports</span></div>
+    <div class="channel-cell" data-cat="sport"><span class="channel-cell-icon">🏀</span><span class="channel-cell-name">Canal+ Sport 2</span></div>
+    <div class="channel-cell" data-cat="cinema"><span class="channel-cell-icon">🎬</span><span class="channel-cell-name">Canal+ Action</span></div>
+    <div class="channel-cell" data-cat="cinema"><span class="channel-cell-icon">🍿</span><span class="channel-cell-name">Canal+ Cinema</span></div>
+    <div class="channel-cell" data-cat="cinema"><span class="channel-cell-icon">🎞️</span><span class="channel-cell-name">Canal+ Séries</span></div>
+    <div class="channel-cell" data-cat="afrique"><span class="channel-cell-icon">🌍</span><span class="channel-cell-name">RTS 1</span></div>
+    <div class="channel-cell" data-cat="afrique"><span class="channel-cell-icon">🦁</span><span class="channel-cell-name">TFM</span></div>
+    <div class="channel-cell" data-cat="afrique"><span class="channel-cell-icon">📺</span><span class="channel-cell-name">2sTV</span></div>
+    <div class="channel-cell" data-cat="afrique"><span class="channel-cell-icon">🌺</span><span class="channel-cell-name">A+ Sénégal</span></div>
+    <div class="channel-cell" data-cat="afrique"><span class="channel-cell-icon">📡</span><span class="channel-cell-name">Sunu Yeuf</span></div>
+    <div class="channel-cell" data-cat="info"><span class="channel-cell-icon">📰</span><span class="channel-cell-name">i24 News</span></div>
+    <div class="channel-cell" data-cat="info"><span class="channel-cell-icon">🗺️</span><span class="channel-cell-name">TV5 Monde</span></div>
+    <div class="channel-cell" data-cat="info"><span class="channel-cell-icon">🌐</span><span class="channel-cell-name">France 24</span></div>
+    <div class="channel-cell" data-cat="jeunesse"><span class="channel-cell-icon">🧒</span><span class="channel-cell-name">Cartoon Network</span></div>
+    <div class="channel-cell" data-cat="jeunesse"><span class="channel-cell-icon">👶</span><span class="channel-cell-name">Gulli</span></div>
+    <div class="channel-cell" data-cat="jeunesse"><span class="channel-cell-icon">🐭</span><span class="channel-cell-name">Disney Channel</span></div>
+    <div class="channel-cell" data-cat="musique"><span class="channel-cell-icon">🎵</span><span class="channel-cell-name">MTV Base</span></div>
+    <div class="channel-cell" data-cat="musique"><span class="channel-cell-icon">🎙️</span><span class="channel-cell-name">Trace Africa</span></div>
+    <div class="channel-cell" data-cat="cinema"><span class="channel-cell-icon">🎭</span><span class="channel-cell-name">Novelas TV</span></div>
+  </div>
+</section>
+
+<!-- ═══ DÉCODEURS ═══ -->
+<section id="decodeurs" class="devices-section">
+  <div class="section-center">
+    <span class="section-eyebrow">Équipements</span>
+    <h2 class="section-title">Le Matériel CANAL+</h2>
+  </div>
+  <div class="devices-grid">
+    <div class="device-card">
+      <span class="device-icon">📺</span>
+      <h3 class="device-name">Décodeur HD</h3>
+      <p class="device-desc">La télé comme vous ne l'avez jamais vue. Résolution 4 fois supérieure à la qualité standard.</p>
+      <button class="device-btn" onclick="toggleModal('subscribeModal')">Découvrir</button>
+    </div>
+    <div class="device-card">
+      <span class="device-icon">🔌</span>
+      <h3 class="device-name">Décodeur Connecté</h3>
+      <p class="device-desc">Plus de 50 000 programmes en replay. Expérience TV fluide et immersive.</p>
+      <button class="device-btn" onclick="toggleModal('subscribeModal')">Découvrir</button>
+    </div>
+    <div class="device-card">
+      <span class="device-icon">🛰️</span>
+      <h3 class="device-name">Kit Parabole</h3>
+      <p class="device-desc">Parabole haute résistance pour une réception parfaite partout au Sénégal.</p>
+      <button class="device-btn" onclick="toggleModal('subscribeModal')">Découvrir</button>
+    </div>
+    <div class="device-card">
+      <span class="device-icon">📱</span>
+      <h3 class="device-name">Application myCANAL</h3>
+      <p class="device-desc">Vos programmes en direct et en replay sur smartphone et tablette, même sans connexion.</p>
+      <button class="device-btn" onclick="toggleModal('subscribeModal')">Télécharger</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ myCANAL ═══ -->
+<section class="mycanal-section" id="mycanal">
+  <div class="mycanal-text">
+    <span class="section-eyebrow" style="color:var(--red);">Application myCANAL</span>
+    <h2 class="section-title" style="color:#fff;">CANAL+ partout,<br>tout le temps</h2>
+    <p style="color:#888;font-size:.9rem;line-height:1.7;margin-bottom:1.5rem;">La TV a enfin son application ! Disponible sur tous vos écrans, l'app CANAL+ vous accompagne partout, tout le temps, même hors connexion.</p>
+    <div class="mycanal-features-list">
+      <div class="mc-feat"><span>📺</span> TV en direct — 300+ chaînes</div>
+      <div class="mc-feat"><span>🔄</span> Replay 7 jours — 50 000+ programmes</div>
+      <div class="mc-feat"><span>📥</span> Téléchargement hors ligne</div>
+      <div class="mc-feat"><span>👨‍👩‍👧</span> Jusqu'à 4 profils par abonnement</div>
+      <div class="mc-feat"><span>🔒</span> Contrôle parental intégré</div>
+    </div>
+    <div class="store-btns">
+      <div class="store-btn"><span>🍎</span><div><small>Disponible sur</small><b>App Store</b></div></div>
+      <div class="store-btn"><span>▶</span><div><small>Disponible sur</small><b>Google Play</b></div></div>
+    </div>
+  </div>
+  <div class="mycanal-visual">
+    <div class="phone-mock">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-header">CANAL+</div>
+        <div class="phone-content">
+          <div class="phone-card"><span>⚽</span><div><b>Canal+ Sport</b><small>CAN 2025 · Live</small></div><span class="live-badge">LIVE</span></div>
+          <div class="phone-card"><span>🎬</span><div><b>Canal+ Cinéma</b><small>20h30</small></div></div>
+          <div class="phone-card"><span>🌍</span><div><b>A+ Sénégal</b><small>22h00</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACTUALITÉS ═══ -->
+<section style="padding:4rem 2rem;background:var(--grey);" id="actualites">
+  <div class="section-center">
+    <span class="section-eyebrow">Nos dernières nouvelles</span>
+    <h2 class="section-title">Actualités CANAL+ Sénégal</h2>
+  </div>
+  <div class="news-grid">
+    <div class="news-card news-featured">
+      <div class="news-img-bg" style="background:linear-gradient(135deg,#0a1628,#1a3a00);">🏆</div>
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <span class="news-tag sport">🏆 CAN 2025 — Exclusivité</span>
+        <h3 class="news-title">Canal+ diffuse l'intégralité de la CAN 2025 en exclusivité — 52 matchs en direct</h3>
+        <p class="news-desc">Pour la première fois, toute la CAN est diffusée exclusivement sur Canal+ après le rachat de MultiChoice.</p>
+        <span class="news-date">Décembre 2025</span>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-img-bg" style="background:linear-gradient(135deg,#001a28,#0a2800);">📺</div>
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <span class="news-tag afrique">📺 Sunu Yeuf</span>
+        <h3 class="news-title">Rentrée Sunu Yeuf 2025 — 3 milliards FCFA investis, 5 000 emplois créés</h3>
+        <span class="news-date">25 septembre 2025</span>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-img-bg" style="background:linear-gradient(135deg,#0a1628,#001a28);">🌍</div>
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <span class="news-tag sport">🌍 Mondial 2026</span>
+        <h3 class="news-title">Sénégal vs France — Les Lions affrontent les Bleus à la Coupe du Monde 2026</h3>
+        <span class="news-date">Décembre 2025</span>
+      </div>
+    </div>
+    <div class="news-card">
+      <div class="news-img-bg" style="background:linear-gradient(135deg,#1a0028,#0a1a00);">🤝</div>
+      <div class="news-overlay"></div>
+      <div class="news-content">
+        <span class="news-tag" style="background:#057a55;">🤝 Soutien médias</span>
+        <h3 class="news-title">Canal+ subventionne les médias privés africains — chaînes sénégalaises éligibles</h3>
+        <span class="news-date">Février 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVENDEURS ═══ -->
+<section style="padding:4rem 2rem;background:#fff;" id="revendeurs">
+  <div class="section-center">
+    <span class="section-eyebrow">Points de vente</span>
+    <h2 class="section-title">Trouver un revendeur</h2>
+    <p class="section-sub">Retrouvez nos agences et revendeurs agréés dans tout le Sénégal</p>
+  </div>
+  <div class="revendeurs-grid">
+    <div class="rev-card"><div class="rev-city">📍 Dakar — Siège</div><div class="rev-addr">31, Avenue Hassan 2, BP 1390</div><div class="rev-hours">🕐 Lun–Sam : 8h–20h</div><div class="rev-tel">📞 33 889 50 10</div></div>
+    <div class="rev-card"><div class="rev-city">📍 Dakar — Almadies</div><div class="rev-addr">Route des Almadies, Zone Nord</div><div class="rev-hours">🕐 Lun–Sam : 9h–19h</div><div class="rev-tel">📞 33 889 50 11</div></div>
+    <div class="rev-card"><div class="rev-city">📍 Thiès</div><div class="rev-addr">Avenue Lamine Guèye, Centre-ville</div><div class="rev-hours">🕐 Lun–Sam : 8h–18h</div><div class="rev-tel">📞 33 889 50 12</div></div>
+    <div class="rev-card"><div class="rev-city">📍 Saint-Louis</div><div class="rev-addr">Rue de France, Quartier Nord</div><div class="rev-hours">🕐 Lun–Sam : 8h–18h</div><div class="rev-tel">📞 33 889 50 13</div></div>
+    <div class="rev-card"><div class="rev-city">📍 Ziguinchor</div><div class="rev-addr">Avenue du Président Senghor</div><div class="rev-hours">🕐 Lun–Sam : 8h–18h</div><div class="rev-tel">📞 33 889 50 14</div></div>
+    <div class="rev-card"><div class="rev-city">📍 Kaolack</div><div class="rev-addr">Rue Valdiodio Ndiaye, Centre</div><div class="rev-hours">🕐 Lun–Sam : 8h–18h</div><div class="rev-tel">📞 33 889 50 15</div></div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section style="background:var(--red);padding:3rem 2rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <h2 style="color:#fff;font-size:1.6rem;font-weight:900;margin-bottom:.5rem;">Restez informé</h2>
+    <p style="color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:1.5rem;">Recevez les offres exclusives et les actualités CANAL+ Sénégal.</p>
+    <div class="newsletter-form">
+      <input type="email" id="newsletterEmail" placeholder="Votre adresse email" class="newsletter-input">
+      <button onclick="submitNewsletter()" class="newsletter-btn">S'inscrire</button>
+    </div>
+    <p id="newsletterMsg" style="color:#fff;font-size:.8rem;margin-top:1rem;display:none;">✅ Merci ! Vous êtes inscrit à notre newsletter.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="faq-section">
+  <h2 class="section-title">Questions Fréquentes</h2>
+  <div class="faq-item open">
+    <div class="faq-q" onclick="toggleFaq(this)">Comment puis-je m'abonner à CANAL+ Sénégal ? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Abonnez-vous en ligne sur ce site, via l'application myCANAL, par Mobile Money (Orange Money, Wave, Free Money) ou en vous rendant dans une agence CANAL+.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Où puis-je acheter mon décodeur à Dakar ou en région ? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Dans toutes les boutiques officielles CANAL+ et chez les distributeurs agréés partout au Sénégal. Le siège est au 31, Avenue Hassan 2, Dakar.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Puis-je payer mon réabonnement via Wave ou Orange Money ? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Oui ! Via Wave, Orange Money, Free Money ou Expresso. Des frais de service de 200 FCFA sont appliqués depuis le 1er septembre 2025.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Comment fonctionne la Semaine Généreuse ? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">En vous réabonnant avant échéance, vous profitez de 7 jours supplémentaires à la formule supérieure sans surcoût. C'est automatique et cumulable.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">L'application myCANAL est-elle incluse dans mon abonnement ? <span class="faq-arrow">▼</span></div>
+    <div class="faq-a">Oui ! L'application myCANAL est incluse pour tout abonnement CANAL+. Elle est disponible sur iOS, Android, PC/Mac et Smart TV.</div>
+  </div>
+</section>
+
+<!-- ═══ SÉLECTEUR DE PAYS ═══ -->
+<section class="pays-section" id="pays">
+  <div class="section-center">
+    <span class="section-eyebrow" style="color:var(--red);">Présent dans 50+ pays</span>
+    <h2 class="section-title" style="color:#fff;">CANAL+ dans votre pays</h2>
+  </div>
+  <div class="pays-grid">
+    <span class="pays-item active">🇸🇳 Sénégal</span>
+    <span class="pays-item" onclick="switchPays(this)">🇨🇮 Côte d'Ivoire</span>
+    <span class="pays-item" onclick="switchPays(this)">🇨🇲 Cameroun</span>
+    <span class="pays-item" onclick="switchPays(this)">🇲🇱 Mali</span>
+    <span class="pays-item" onclick="switchPays(this)">🇧🇫 Burkina Faso</span>
+    <span class="pays-item" onclick="switchPays(this)">🇬🇦 Gabon</span>
+    <span class="pays-item" onclick="switchPays(this)">🇹🇩 Tchad</span>
+    <span class="pays-item" onclick="switchPays(this)">🇲🇬 Madagascar</span>
+    <span class="pays-item" onclick="switchPays(this)">🇬🇳 Guinée</span>
+    <span class="pays-item" onclick="switchPays(this)">🇨🇬 Congo</span>
+    <span class="pays-item" onclick="switchPays(this)">🇳🇪 Niger</span>
+    <span class="pays-item" onclick="switchPays(this)">🇧🇯 Bénin</span>
+    <span class="pays-item" onclick="switchPays(this)">🇹🇬 Togo</span>
+    <span class="pays-item" onclick="switchPays(this)">🇲🇷 Mauritanie</span>
+    <span class="pays-item" onclick="switchPays(this)">🇬🇭 Ghana</span>
+    <span class="pays-item" onclick="switchPays(this)">🇳🇬 Nigeria</span>
+    <span class="pays-item" onclick="switchPays(this)">🇿🇦 Afrique du Sud</span>
+    <span class="pays-item" onclick="switchPays(this)">🌍 +33 pays</span>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">CANAL<span>+</span></div>
+      <p>Le leader de la TV payante au Sénégal depuis le 21 décembre 1991. Plus de 300 chaînes TV et radio.</p>
+      <a href="https://www.facebook.com/CanalplusSenegal" target="_blank" class="fb-badge">
+        f Facebook · 534 746 abonnés
+      </a>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/CanalplusSenegal" target="_blank" class="social-link">f</a>
+        <div class="social-link">𝕏</div>
+        <div class="social-link">▶</div>
+        <div class="social-link">📷</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Nos offres</h4>
+      <ul>
+        <li><a href="#offres">Bouquet Access</a></li>
+        <li><a href="#offres">Bouquet Évasion</a></li>
+        <li><a href="#offres">Bouquet Évasion+</a></li>
+        <li><a href="#offres">Tout Canal+</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#mycanal">myCANAL</a></li>
+        <li><a href="#decodeurs">Décodeurs</a></li>
+        <li><a href="#revendeurs">Revendeurs</a></li>
+        <li><a href="#guide-tv">Guide TV</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Aide</h4>
+      <ul>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="tel:+221338895010">📞 33 889 50 10</a></li>
+        <li><a href="#">Lun–Sam 8h–20h</a></li>
+        <li><a href="https://www.canalplus-afrique.com/sn" target="_blank">Site officiel</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 CANAL+ Sénégal (Canal Horizons) · Tous droits réservés · 🇸🇳 Depuis 1991</p>
+    <div class="footer-legal">
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">CGU</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CHATBOT FLOTTANT ═══ -->
+<div class="chatbot-bubble" id="chatbotBubble" onclick="toggleChat()">
+  💬<span class="chatbot-notif">1</span>
+</div>
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <div style="display:flex;align-items:center;gap:.6rem;">
+      <span style="font-size:1.4rem;">🤖</span>
+      <div><div class="chatbot-name">Assistant CANAL+</div><div class="chatbot-status">● En ligne</div></div>
+    </div>
+    <button onclick="toggleChat()" style="background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="chat-msg bot">Dalal ak jamm ! 👋 Comment puis-je vous aider ?</div>
+    <div class="chat-quick-btns">
+      <button class="chat-quick" onclick="chatQuick('abonn')">💳 S'abonner</button>
+      <button class="chat-quick" onclick="chatQuick('reabo')">🔄 Se réabonner</button>
+      <button class="chat-quick" onclick="chatQuick('chaines')">📺 Les chaînes</button>
+      <button class="chat-quick" onclick="chatQuick('aide')">❓ Aide</button>
+    </div>
+  </div>
+  <div class="chatbot-input-wrap">
+    <input type="text" id="chatInput" placeholder="Écrivez votre message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- ═══ MODALS ═══ -->
+
+<!-- Login -->
+<div id="loginModal" class="modal-overlay" onclick="closeModalOnOverlay(event,'loginModal')">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-logo">CANAL<span>+</span></div>
+      <button class="modal-close" onclick="toggleModal('loginModal')">✕</button>
+    </div>
+    <div class="modal-body" id="loginModalBody">
+      <h3 class="modal-title">Espace Client</h3>
+      <p class="modal-sub">Connectez-vous pour gérer vos options.</p>
+      <div class="form-group">
+        <label>Email ou numéro de téléphone</label>
+        <input type="text" placeholder="ex: moussa@gmail.com">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" placeholder="••••••••">
+      </div>
+      <button class="modal-btn" onclick="submitFakeForm('loginModalBody','login')">Se connecter</button>
+      <p style="text-align:center;font-size:.75rem;margin-top:.75rem;"><a href="#" style="color:var(--red);">Mot de passe oublié ?</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Subscribe -->
+<div id="subscribeModal" class="modal-overlay" onclick="closeModalOnOverlay(event,'subscribeModal')">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div class="modal-logo">CANAL<span>+</span></div>
+      <button class="modal-close" onclick="toggleModal('subscribeModal')">✕</button>
+    </div>
+    <div class="modal-body" id="subscribeModalBody">
+      <h3 class="modal-title">S'abonner</h3>
+      <p class="modal-sub">Laissez votre numéro, un conseiller vous rappelle gratuitement.</p>
+      <div class="form-group">
+        <label>Nom complet</label>
+        <input type="text" placeholder="ex: Amadou Diop">
+      </div>
+      <div class="form-group">
+        <label>Numéro de téléphone</label>
+        <input type="tel" placeholder="ex: 77 123 45 67">
+      </div>
+      <div class="form-group">
+        <label>Formule souhaitée</label>
+        <select style="width:100%;border:1.5px solid #ddd;padding:.75rem 1rem;border-radius:4px;font-family:inherit;font-size:.88rem;">
+          <option>ACCESS — 5 000 FCFA/mois</option>
+          <option selected>ÉVASION — 10 000 FCFA/mois</option>
+          <option>ÉVASION+ — 20 000 FCFA/mois</option>
+          <option>TOUT CANAL+ — 40 000 FCFA/mois</option>
+        </select>
+      </div>
+      <button class="modal-btn" onclick="submitFakeForm('subscribeModalBody','subscribe')">Être rappelé</button>
+    </div>
+  </div>
+</div>
+
+<!-- Réabonnement -->
+<div id="reaboModal" class="modal-overlay" onclick="closeModalOnOverlay(event,'reaboModal')">
+  <div class="modal" style="max-width:480px;">
+    <div class="modal-header">
+      <div class="modal-logo">CANAL<span>+</span></div>
+      <button class="modal-close" onclick="toggleModal('reaboModal')">✕</button>
+    </div>
+    <div class="modal-body" id="reaboModalBody">
+      <h3 class="modal-title">Se réabonner</h3>
+      <p class="modal-sub">Réabonnez-vous avant échéance et profitez de 7 jours offerts !</p>
+      <div style="background:#fff8e1;border:1px solid #ffd54f;border-radius:4px;padding:.75rem;font-size:.78rem;color:#7b5800;margin-bottom:1rem;">⚠️ Frais de service de <strong>200 FCFA</strong> via Mobile Money depuis le 1er sept. 2025.</div>
+      <div class="form-group">
+        <label>Numéro de décodeur</label>
+        <input type="text" placeholder="ex: 1234567890">
+      </div>
+      <div class="form-group">
+        <label>Moyen de paiement</label>
+        <select style="width:100%;border:1.5px solid #ddd;padding:.75rem;border-radius:4px;font-family:inherit;">
+          <option>Orange Money</option>
+          <option>Wave</option>
+          <option>Free Money</option>
+          <option>Expresso</option>
+          <option>Carte bancaire</option>
+          <option>Cash en agence</option>
+        </select>
+      </div>
+      <button class="modal-btn" onclick="submitFakeForm('reaboModalBody','reabo')">Confirmer le réabonnement</button>
+    </div>
+  </div>
+</div>
+
+<!-- Recherche -->
+<div id="searchModal" class="modal-overlay" onclick="closeModalOnOverlay(event,'searchModal')">
+  <div class="search-modal">
+    <div class="search-inner">
+      <input type="text" id="searchInput" placeholder="Rechercher une chaîne, un programme..." class="search-big-input" oninput="handleSearch(this.value)" autofocus>
+      <button onclick="toggleModal('searchModal')" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888;">✕</button>
+    </div>
+    <div id="searchResults"></div>
+    <div class="search-tags-wrap">
+      <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;color:#bbb;margin-bottom:.6rem;">Recherches populaires</div>
+      <div class="search-tags">
+        <span class="search-tag" onclick="doSearch('Canal+ Sport')">⚽ Canal+ Sport</span>
+        <span class="search-tag" onclick="doSearch('CAN 2025')">🏆 CAN 2025</span>
+        <span class="search-tag" onclick="doSearch('Wiri Wiri')">📺 Wiri Wiri</span>
+        <span class="search-tag" onclick="doSearch('Sakho')">🔍 Sakho & Mangane</span>
+        <span class="search-tag" onclick="doSearch('Cartoon')">🧒 Jeunesse</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Trailer YouTube -->
+<div class="modal-overlay" id="trailerModal" onclick="closeModalOnOverlay(event,'trailerModal')">
+  <div style="background:#000;max-width:800px;width:100%;border-radius:6px;overflow:hidden;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;background:#111;">
+      <div id="trailerTitle" style="color:#fff;font-size:.9rem;font-weight:700;"></div>
+      <button onclick="closeTrailer()" style="background:none;border:none;color:#888;font-size:1.3rem;cursor:pointer;">✕</button>
+    </div>
+    <div style="position:relative;padding-bottom:56.25%;height:0;">
+      <iframe id="trailerFrame" src="" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" allow="autoplay"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
